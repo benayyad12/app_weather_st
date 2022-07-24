@@ -7,7 +7,7 @@ import pickle
 
 def predict(arr):
     # Load the model
-    with open('/Users/abdessalambenayyad/desktop/Weather_prediction/final_model.sav', 'rb') as f:
+    with open('final_model.sav', 'rb') as f:
         model = pickle.load(f)
     classes ={0: 'rain', 1: 'snow', 2: 'sun', 3: 'drizzle', 4: 'fog'}
     # return prediction as well as class probabilities
