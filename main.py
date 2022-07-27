@@ -28,10 +28,10 @@ def predict_class():
         plt.text(value, index,str(value))
     st.pyplot()
 st.markdown("**Please enter the parameters of weather we are going to predict **")
-precipitation= st.text_input('Enter precipitation', '')
-temp_max = st.text_input('Enter temp_max', '')
-temp_min = st.text_input('Enter temp_min', '')
-wind = st.text_input('Enter wind', '')
+precipitation=st.sidebar.slider('precipitation',0,55.9)
+temp_max=st.sidebar.slider('temp_max',-1.6,35.6)
+temp_min=st.sidebar.slider('temp_min',-7.1,18.3)
+wind=st.sidebar.slider('wind',0.4,9.5)
 if st.button("Predict"):
     predict_class()
 
